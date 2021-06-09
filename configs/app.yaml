@@ -1,0 +1,53 @@
+
+Server:
+  IP:
+  Port: 8088
+  ReadTimeoutSeconds: 15
+  WriteTimeoutSeconds: 15
+  IdleTimeoutSeconds: 30
+  MaxHeaderMB: 5
+
+Log: # zerolog
+  FileName: 'logs/server.%Y%m%d%H%M.log'
+  LinkName: ''
+  Level: 0
+  MaxAgeDay: 90
+  RotationTimeHour: 6
+
+Redis:
+  - Addr: '127.0.0.1:6379'
+    Password:
+    DB: 0
+    UseTLS: false
+
+Database:
+  # database read engine
+  - EngineName: 'ReadEngine'
+    DriverName: 'mysql'
+    DBName: 'go_vue_admin'
+    Host: '127.0.0.1'
+    Port: 3306
+    Username: 'admin'
+    Password: 'go_vue_admin'
+    Charset: 'utf8mb4'
+    LogLevel: 0
+    ConnMaxLifetimeMinutes: 60
+    MaxIdleConns: 20
+    MaxOpenConns: 100
+    ShowSql: true
+    Connect: true
+  # database write engine
+  - EngineName: 'WriteEngine'
+    DriverName: 'mysql'
+    DBName: 'go_vue_admin'
+    Host: '127.0.0.1'
+    Port: 3306
+    Username: 'admin'
+    Password: 'go_vue_admin'
+    Charset: 'utf8mb4'
+    LogLevel: 0
+    ConnMaxLifetimeMinutes: 60
+    MaxIdleConns: 20
+    MaxOpenConns: 100
+    ShowSql: true
+    Connect: true

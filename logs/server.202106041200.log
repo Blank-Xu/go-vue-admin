@@ -1,0 +1,2 @@
+{"level":"info","database":"go_vue_admin","time":"2021-06-04T16:54:34+08:00","message":"PING DATABASE mysql"}
+{"level":"error","time":"2021-06-04T16:54:34+08:00","message":"load database read engine failed, err: database[go_vue_admin] connect failed: Error 1045: Access denied for user 'admin'@'172.17.0.1' (using password: YES)"}
